@@ -2,10 +2,11 @@
   "name": "server",
   "version": "0.1.0",
   "description": " A basic starter for an express.js API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "lint": "eslint --fix src",
     "test": "mocha --exit"
   },
@@ -18,11 +19,21 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/helmet": "^4.0.0",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "@typescript-eslint/parser": "^8.21.0",
     "eslint": "^9.23.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "mocha": "^11.1.0",
     "nodemon": "^3.1.9",
-    "supertest": "^7.1.0"
+    "supertest": "^7.1.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
   }
 }
