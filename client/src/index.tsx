@@ -16,4 +16,4 @@ root.render(
 );
 
 // Optional: Start measuring performance
-reportWebVitals(console.log); 
+reportWebVitals(); 

@@ -5,4 +5,4 @@ const router: Router = express.Router();
 
 router.use('/search', search);
 
-export default router; 
+export default router;
